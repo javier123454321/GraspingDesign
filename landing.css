@@ -1,0 +1,16 @@
+.img-left{
+  margin: 0px;
+  font-size:0;
+  width: 30vw;
+}
+.img-mid{
+  margin: auto;
+  font-size:0;
+  width: 30vw;
+}
+.img-right{
+  float: right;
+  margin: 0px;
+  font-size:0;
+  width: 30vw;
+}

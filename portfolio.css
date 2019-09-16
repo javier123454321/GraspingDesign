@@ -1,0 +1,53 @@
+
+
+html{
+  background-color: #4c546b;
+  font-family: 'Montserrat', 'Helvetica';
+}
+
+body{
+  font-family: 'Montserrat', 'Helvetica';
+  text-align: center;
+}
+
+.button{
+  font-size: 14px;
+  background-color: transparent;
+  color: #2b2a2a;
+  border:none;
+  border-bottom: solid 1px;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: all 1s;
+}
+
+.button:hover, .active{
+  color: black;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: all 1s;
+  margin: 0 40px 0 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.active{
+  background-color: transparent;
+  border: none;
+  /* font-style: bold; */
+}
+
+div.wrapper{
+  margin-top: 5%;
+}
+div.portfolioProject{
+  max-width:80vw;
+  min-width: 200px
+  margin:auto;
+
+}
+
+.projectPreview{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  /* float: left; */
+}
