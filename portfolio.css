@@ -37,15 +37,19 @@ body{
 
 div.wrapper{
   margin-top: 5%;
+  position: relative;
+  float: left;
 }
+
 div.portfolioProject{
   max-width:80vw;
   min-width: 200px
   margin:auto;
-
+  z-index: -1;
 }
-.wrapper{
-    float:left;
+
+div.portfolioProject:hover{
+  z-index: 1;
 }
 
 .projects{
@@ -53,16 +57,12 @@ div.portfolioProject{
 }
 
 .projectPreview{
-  /* position: absolute; */
-  z-index: -1;
   filter: sepia(20%) grayscale(100%) contrast(60%) brightness(110%);
   object-fit: cover;
   width: 200px;
   height: 200px;
   margin: auto;
   /* float: left; */
-  -webkit-transition: all 1s;
-  -webkit-transition: object-position .4s;
 }
 
 .projectPreview:hover{
