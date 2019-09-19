@@ -10,6 +10,10 @@ body{
   text-align: center;
 }
 
+.menu{
+  margin-bottom: 20px;
+}
+
 .button{
   font-size: 14px;
   background-color: transparent;
@@ -38,8 +42,8 @@ body{
 div.wrapper{
   margin:auto;
   text-align: center;
-  margin-top: 5%;
-  position: static;
+  /* margin-top: 5%; */
+  position: relative;
   float: left;
 
 }
@@ -77,4 +81,17 @@ div.portfolioProject:hover{
   transition-timing-function: linear;
   object-position: 100%;
   transition: object-position 3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .button{
+    font-size: 14px;
+    mA
+    background-color: transparent;
+    color: #2b2a2a;
+    border:none;
+    border-bottom: solid 1px;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: all 1s;
+  }
 }
