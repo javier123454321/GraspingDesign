@@ -11,7 +11,7 @@ body{
 }
 
 .menu{
-  margin-bottom: 20px;
+  margin-bottom: 55px;
 }
 
 .button{
@@ -36,13 +36,15 @@ body{
 .active{
   background-color: transparent;
   border: none;
-  /* font-style: bold; */
+}
+
+.projects{
+  margin: auto;
+  max-width: 800px;
 }
 
 div.wrapper{
   margin:auto;
-  text-align: center;
-  /* margin-top: 5%; */
   position: relative;
   float: left;
 
@@ -50,8 +52,7 @@ div.wrapper{
 
 div.portfolioProject{
   max-width:80vw;
-  min-width: 200px
-  /* margin:auto; */
+  min-width: 200px;
   z-index: -1;
 }
 
@@ -59,21 +60,17 @@ div.portfolioProject:hover{
   z-index: 1;
 }
 
-.projects{
-  position: relative;
-}
-
-.projectPreview{
+.projectPreview, .projectDisplay{
   filter: sepia(20%) grayscale(100%) contrast(60%) brightness(110%);
   object-fit: cover;
+  object-position: 0% 0%;
+  position: relative;
   width: 200px;
   height: 200px;
   margin: auto;
-  /* float: left; */
 }
 
 .projectPreview:hover{
-  /* display: inline-block; */
   z-index: 1;
   transform: scale(1.2);
   -webkit-filter: none;
@@ -83,15 +80,47 @@ div.portfolioProject:hover{
   transition: object-position 3s;
 }
 
-@media only screen and (max-width: 600px) {
-  .button{
-    font-size: 14px;
-    mA
-    background-color: transparent;
-    color: #2b2a2a;
-    border:none;
-    border-bottom: solid 1px;
-    transition-timing-function: ease-in-out;
-    -webkit-transition: all 1s;
+.projectDisplay{
+  filter: none;
+  filter: grayscale(30%);
+}
+
+
+@media only screen and (max-width: 815px) {
+  .projects{
+    max-width: 600px;
   }
+}
+
+@media only screen and (max-width: 615px) {
+  .projects{
+    max-width: 400px;
+    }
+
+  .button{
+    margin-top: 10px;
+  }
+
+  .button:hover, .active{
+    margin: 0 25px 0 25px;
+    font-size: 16px;
+    color: black;
+    }
+
+  .active{
+    border: none;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+  .button{
+    width:100%;
+    max-width: 300px;
+    }
+  .button:hover, .active{
+    margin: 20px 0 20px 0;
+  }
+  .projects{
+    max-width: 200px;
+    }
 }

@@ -21,36 +21,13 @@ function clickToggleActive(buttons){
       console.log('clicked ' + this.getAttribute('name'));
 
       setInactive(this)});
-
   };
  }
 
-// function clickToggleActive(buttons){
-//   'click', () => {
-//   if (elem.getAttribute('class') == 'button active'){
-//       elem.addEventListener('click', setInactive(activeButton))
-//     }
-//   })
-// }
-
+ function narrowPortfolio(buttonName){
+   if (buttonName == 'allButton'){
+     
+   }
+ }
 
 clickToggleActive(buttons);
-
-
-
-//
-// $('button').click(some_function)
-//
-//
-//
-// function setInactive(button){
-//   button.setAttribute('id', '')
-// }
-//
-// function setActive(button){
-//   button.setAttribute('id', 'active')
-// }
-//
-// let activeButton = document.getElementsbyClassName("active")
-//
-// activeButton.addEventListener('click', setInactive(activeButton));
