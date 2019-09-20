@@ -42,7 +42,7 @@ function setModals(){
     closeModal[i].addEventListener('click', function(){
       this.parentElement.parentElement.parentElement.style.display = "none";
     })
-    
+
     window.onclick = function(event) {
       let modal = document.getElementsByClassName("modal")
       for (i = 0; i < modal.length; i++) {

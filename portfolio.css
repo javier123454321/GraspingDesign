@@ -1,8 +1,10 @@
 
 
 html{
-  background-color: #4c546b;
+  background: rgb(132,38,134);
+  background: linear-gradient(180deg, rgba(132,38,134,1) 50%, rgba(55,39,113,1) 98%);
   font-family: 'Montserrat', 'Helvetica';
+  background-size: 100vw 100vh;
 }
 
 body{
