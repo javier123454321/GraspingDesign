@@ -1,32 +1,55 @@
 
 // Setting up the menu bar to search for Portfolio projects based on category
-function setInactive(button){
-  if (button.getAttribute('class') != 'button active'){
-    document.getElementsByClassName('button active')[0].setAttribute('class', 'button')
-    button.setAttribute('class', 'button active')
+function toggleActive(button){
+  if (button.getAttribute('class') != 'menuButton active'){
+    document.getElementsByClassName('menuButton active')[0].setAttribute('class', 'menuButton')
+    button.setAttribute('class', 'menuButton active')
   }
 }
 
-let buttons = document.getElementsByClassName("button");
+let buttons = document.getElementsByClassName("menuButton");
 
 function clickToggleActive(buttons){
-  console.log(buttons);
   for (i = 0; i < buttons.length; i++) {
-    // console.log(buttons[i]);
     buttons[i].addEventListener('click', function(){
       console.log('clicked ' + this.getAttribute('name'));
-
-      setInactive(this)});
+      toggleActive(this)
+      selectPortfolio(this.getAttribute('name'))});
   };
+ }
+
+function selectPortfolio(buttonName){
+ // Makes it so that every project that is not of the category that was clicked become unclickable
+ // It changes the styling in those projects to indicate its unclickability
+ // it changes the styling on the clickable buttons to reinforce  their clickability
+
+ let projects = document.getElementsByClassName('portfolioProject')
+
+ if (buttonName != 'allButton'){
+   for (i = 0; i < projects.length; i++){
+     let classString = 'portfolioProject '+ buttonName;
+
+     console.log(classString);
+     if(!projects[i].classList.contains(buttonName)){
+       projects[i].classList.remove('onProject');
+       projects[i].classList.add('offProject');
+     } else {
+       projects[i].style.filter = "none"
+       projects[i].classList.remove('offProject');
+       projects[i].classList.add('onProject');
+        }
+      }
+    }else{
+      for (i = 0; i < projects.length; i++){
+        projects[i].classList.remove('offProject');
+        projects[i].classList.remove('onProject');
+        }
+    }
  }
 
 clickToggleActive(buttons);
 
-function narrowPortfolio(buttonName){
-  if (buttonName == 'allButton'){
 
-  }
-}
 
 
 function setModals(){
@@ -41,22 +64,20 @@ function setModals(){
 
     activeButton.addEventListener('click', function(){
       activeModal.style.display = "block";
-      // activeModal.children[0].classList.add("showModal");
       setTimeout(translateModal, 1, activeModal);
     }, false)
 
     closeModal[i].addEventListener('click', function(){
-      this.parentElement.parentElement.parentElement.style.display = "none";
       setTimeout(unTranslateModal, 1, activeModal);
-      // activeModal.children[0].classList.remove("showModal")
+      this.parentElement.parentElement.parentElement.style.display = "none";
     })
 
     window.onclick = function(event) {
       let modal = document.getElementsByClassName("modal")
       for (i = 0; i < modal.length; i++) {
         if (event.target == modal[i]) {
-          modal[i].style.display = "none";
           setTimeout(unTranslateModal, 1, modal[i]);
+          modal[i].style.display = "none";
         }
       }
     }
@@ -65,12 +86,10 @@ function setModals(){
 
 function translateModal(modal){
   modal.children[0].style.transform = "translatex(-50%)";
-  console.log("translateModal fired");
 }
 
 function unTranslateModal(modal){
   modal.children[0].style.transform = "translatex(-150%)";
-  console.log("unTranslateModal fired");
 }
 
 
