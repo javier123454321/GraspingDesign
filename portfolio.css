@@ -107,12 +107,21 @@ div.portfolioProject:hover{
   position: fixed;
   top: 8%;
   left:50%;
-  transform: translateX(-50%);
+  transform: translateX(-150%);
   min-width: 250px;
   width: 75%;
   max-width: 1000px;
   background-color: #fefefe;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 1s ease;
+}
 
+.showModal{
+  left:50%;
+  transition: 2s linear all;
 }
 
 .modalHeader{

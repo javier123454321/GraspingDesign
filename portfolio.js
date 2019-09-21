@@ -33,14 +33,22 @@ function setModals(){
 
   var btns = document.getElementsByClassName("portfolioProject");
   var closeModal = document.getElementsByClassName("close");
+
   for (i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function(){
-      console.log(this.parentElement.nextElementSibling);
-      this.parentElement.nextElementSibling.style.display = "block";
-    })
+
+    let activeButton = btns[i];
+    let activeModal = activeButton.parentElement.nextElementSibling;
+
+    activeButton.addEventListener('click', function(){
+      activeModal.style.display = "block";
+      // activeModal.children[0].classList.add("showModal");
+      setTimeout(translateModal, 1, activeModal);
+    }, false)
 
     closeModal[i].addEventListener('click', function(){
       this.parentElement.parentElement.parentElement.style.display = "none";
+      setTimeout(unTranslateModal, 1, activeModal);
+      // activeModal.children[0].classList.remove("showModal")
     })
 
     window.onclick = function(event) {
@@ -48,13 +56,22 @@ function setModals(){
       for (i = 0; i < modal.length; i++) {
         if (event.target == modal[i]) {
           modal[i].style.display = "none";
+          setTimeout(unTranslateModal, 1, modal[i]);
         }
       }
     }
-
   }
 }
 
+function translateModal(modal){
+  modal.children[0].style.transform = "translatex(-50%)";
+  console.log("translateModal fired");
+}
+
+function unTranslateModal(modal){
+  modal.children[0].style.transform = "translatex(-150%)";
+  console.log("unTranslateModal fired");
+}
 
 
 setModals();
