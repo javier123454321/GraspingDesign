@@ -20,21 +20,23 @@ function clickToggleActive(buttons){
 
 function selectPortfolio(buttonName){
  // Makes it so that every project that is not of the category that was clicked become unclickable
- // It changes the styling in those projects to indicate its unclickability
- // it changes the styling on the clickable buttons to reinforce  their clickability
+ // It changes the styling in those projects to indicate its unclickability by adding class 'offProject'
+ // it changes the styling on the clickable buttons to reinforce  their clickability by adding class 'onProject'
 
    let projects = document.getElementsByClassName('portfolioProject')
 
    if (buttonName != 'allButton'){
      for (i = 0; i < projects.length; i++){
-       
-       if(!projects[i].classList.contains(buttonName)){
-         projects[i].setAttribute('class', 'onProject');
+
+       if(projects[i].classList.contains(buttonName)){
+         projects[i].classList.add('onProject');
        } else {
-         projects[i].setAttribute('class', 'onProject');
+         projects[i].classList.remove('onProject');
+         projects[i].classList.add('offProject');
           }
         }
       }else{
+        // the allButton resets the
         for (i = 0; i < projects.length; i++){
           projects[i].classList.remove('offProject');
           projects[i].classList.remove('onProject');
