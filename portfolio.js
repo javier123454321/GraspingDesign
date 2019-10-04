@@ -23,31 +23,26 @@ function selectPortfolio(buttonName){
  // It changes the styling in those projects to indicate its unclickability
  // it changes the styling on the clickable buttons to reinforce  their clickability
 
- let projects = document.getElementsByClassName('portfolioProject')
+   let projects = document.getElementsByClassName('portfolioProject')
 
- if (buttonName != 'allButton'){
-   for (i = 0; i < projects.length; i++){
-     let classString = 'portfolioProject '+ buttonName;
+   if (buttonName != 'allButton'){
+     for (i = 0; i < projects.length; i++){
 
-     console.log(classString);
-     if(!projects[i].classList.contains(buttonName)){
-       projects[i].classList.remove('onProject');
-       projects[i].classList.add('offProject');
-     } else {
-       projects[i].style.filter = "none"
-       projects[i].classList.remove('offProject');
-       projects[i].classList.add('onProject');
+       console.log(classString);
+       if(!projects[i].classList.contains(buttonName)){
+         projects[i].setAttribute('class', 'onProject');
+       } else {
+         projects[i].setAttribute('class', 'onProject');
+          }
         }
+      }else{
+        for (i = 0; i < projects.length; i++){
+          projects[i].classList.remove('offProject');
+          projects[i].classList.remove('onProject');
+          }
       }
-    }else{
-      for (i = 0; i < projects.length; i++){
-        projects[i].classList.remove('offProject');
-        projects[i].classList.remove('onProject');
-        }
-    }
- }
+   }
 
-clickToggleActive(buttons);
 
 
 
@@ -92,5 +87,6 @@ function unTranslateModal(modal){
   modal.children[0].style.transform = "translatex(-150%)";
 }
 
-
+//********************************Set event Listeners, etc*******************************//
+clickToggleActive(buttons);
 setModals();

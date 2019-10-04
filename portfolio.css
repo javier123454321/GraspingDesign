@@ -85,13 +85,13 @@ div.portfolioProject:hover{
 
 .onProject{
   border: solid 2px;
-  box-sizing: border-box;
   border-color: tomato;
   transform:scale(1);
-  -webkit-filter: none;
+  filter: none;
   z-index: 2;
 }
 
+/*=====================================================START Modal==============================================================*/
 .modal{
   position: fixed;
   left:0;
@@ -150,6 +150,8 @@ div.portfolioProject:hover{
   text-align: center;
   font-size: 24px;
 }
+
+/*-----------------------------------------------------END Modal---------------------------------------------------------*/
 
 button.close {
   margin: auto;
