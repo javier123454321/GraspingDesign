@@ -27,8 +27,7 @@ function selectPortfolio(buttonName){
 
    if (buttonName != 'allButton'){
      for (i = 0; i < projects.length; i++){
-
-       console.log(classString);
+       
        if(!projects[i].classList.contains(buttonName)){
          projects[i].setAttribute('class', 'onProject');
        } else {
@@ -86,7 +85,6 @@ function translateModal(modal){
 function unTranslateModal(modal){
   modal.children[0].style.transform = "translatex(-150%)";
 }
-
 //********************************Set event Listeners, etc*******************************//
 clickToggleActive(buttons);
 setModals();
