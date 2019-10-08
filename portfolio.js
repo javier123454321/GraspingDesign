@@ -1,6 +1,6 @@
 
 // Setting up the menu bar to search for Portfolio projects based on category
-function toggleActive(button){
+function toggleActiveMenu(button){
   if (button.getAttribute('class') != 'menuButton active'){
     document.getElementsByClassName('menuButton active')[0].setAttribute('class', 'menuButton')
     button.setAttribute('class', 'menuButton active')
@@ -9,11 +9,11 @@ function toggleActive(button){
 
 let buttons = document.getElementsByClassName("menuButton");
 
-function clickToggleActive(buttons){
+function clickToggleActiveMenu(buttons){
   for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(){
       console.log('clicked ' + this.getAttribute('name'));
-      toggleActive(this)
+      toggleActiveMenu(this)
       selectPortfolio(this.getAttribute('name'))});
   };
  }
@@ -29,14 +29,16 @@ function selectPortfolio(buttonName){
      for (i = 0; i < projects.length; i++){
 
        if(projects[i].classList.contains(buttonName)){
+         projects[i].classList.remove('offProject');
          projects[i].classList.add('onProject');
        } else {
          projects[i].classList.remove('onProject');
          projects[i].classList.add('offProject');
           }
         }
-      }else{
-        // the allButton resets the
+        
+  }else{
+        // the allButton resets the classes of all
         for (i = 0; i < projects.length; i++){
           projects[i].classList.remove('offProject');
           projects[i].classList.remove('onProject');
@@ -74,11 +76,7 @@ function setModals(){
         if (event.target == modal[i]) {
           setTimeout(unTranslateModal, 1, modal[i]);
           modal[i].style.display = "none";
-        }
-      }
-    }
-  }
-}
+}}}}}
 
 function translateModal(modal){
   modal.children[0].style.transform = "translatex(-50%)";
@@ -88,5 +86,5 @@ function unTranslateModal(modal){
   modal.children[0].style.transform = "translatex(-150%)";
 }
 //********************************Set event Listeners, etc*******************************//
-clickToggleActive(buttons);
+clickToggleActiveMenu(buttons);
 setModals();
