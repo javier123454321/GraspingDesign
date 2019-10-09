@@ -49,6 +49,7 @@ div.wrapper{
   margin:auto;
   position: relative;
   float: left;
+  /* PV - are there other ways to achieve your layout without floats? And retain the responsiveness? */
 }
 
 div.portfolioProject{
@@ -90,6 +91,7 @@ div.portfolioProject:hover{
   z-index: 2;
 }
 
+/* PV - you could consider moving the modal styles to a different file */
 /*=====================================================START Modal==============================================================*/
 .modal{
   position: fixed;
