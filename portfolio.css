@@ -86,11 +86,16 @@ img.projectPreview:hover{
 }
 
 .offProject > img.projectPreview{
-  filter: sepia(60%) brightness(50%);
+  filter: grayscale(100%) brightness(10%) contrast(80%);
 }
 
 .offProject > img.projectPreview:hover{
-
+  transform:none;
+  cursor: default;
+  z-index: 1;
+  transition-timing-function: linear;
+  transition: none;
+  object-position: 50% 0%;
 }
 
 

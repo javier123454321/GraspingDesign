@@ -36,7 +36,7 @@ function selectPortfolio(buttonName){
          projects[i].classList.add('offProject');
           }
         }
-        
+
   }else{
         // the allButton resets the classes of all
         for (i = 0; i < projects.length; i++){
@@ -61,12 +61,16 @@ function setModals(){
     let activeModal = activeButton.parentElement.nextElementSibling;
 
     activeButton.addEventListener('click', function(){
-      activeModal.style.display = "block";
-      setTimeout(translateModal, 1, activeModal);
+      if(activeButton.classList.contains("offProject")){
+        return;
+      }else{
+        activeModal.style.display = "block";
+        setTimeout(function(){slideInModal(activeModal)}, 10)
+      };
     }, false)
 
     closeModal[i].addEventListener('click', function(){
-      setTimeout(unTranslateModal, 1, activeModal);
+      slideOutModal(activeModal)
       this.parentElement.parentElement.parentElement.style.display = "none";
     })
 
@@ -74,16 +78,19 @@ function setModals(){
       let modal = document.getElementsByClassName("modal")
       for (i = 0; i < modal.length; i++) {
         if (event.target == modal[i]) {
-          setTimeout(unTranslateModal, 1, modal[i]);
+          slideOutModal(modal[i])
+          // console.log(modal[i]);
           modal[i].style.display = "none";
 }}}}}
 
-function translateModal(modal){
+function slideInModal(modal){
   modal.children[0].style.transform = "translatex(-50%)";
+  console.log("slideIn called");
 }
 
-function unTranslateModal(modal){
+function slideOutModal(modal){
   modal.children[0].style.transform = "translatex(-150%)";
+  console.log("slideOut called");
 }
 //********************************Set event Listeners, etc*******************************//
 clickToggleActiveMenu(buttons);
