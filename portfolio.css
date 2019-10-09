@@ -62,8 +62,8 @@ div.portfolioProject:hover{
   z-index: 1;
 }
 
-.projectPreview{
-  filter: sepia(20%) grayscale(100%) contrast(60%) brightness(110%);
+img.projectPreview{
+  filter: grayscale(100%) contrast(60%) brightness(110%);
   object-fit: cover;
   object-position: 50% 0%;
   position: relative;
@@ -72,26 +72,33 @@ div.portfolioProject:hover{
   margin: auto;
 }
 
-.projectPreview:hover, .onProject{
+img.projectPreview:hover{
   cursor:pointer;
   z-index: 1;
   transform: scale(1.2);
-  -webkit-filter: none;
   -webkit-transition: all 10s;
   transition-timing-function: linear;
   object-position: 100%;
   transition: object-position 5s;
 }
 
-.onProject{
-  border: solid 2px;
-  border-color: tomato;
-  transform:scale(1);
-  filter: none;
-  z-index: 2;
+.onProject > img.projectPreview, img.projectPreview:hover{
+  filter:none;
 }
 
-/* PV - you could consider moving the modal styles to a different file */
+.offProject > img.projectPreview{
+  filter: grayscale(100%) brightness(10%) contrast(80%);
+}
+
+.offProject > img.projectPreview:hover{
+  transform:none;
+  cursor: default;
+  z-index: 1;
+  transition-timing-function: linear;
+  transition: none;
+  object-position: 50% 0%;
+}
+
 /*=====================================================START Modal==============================================================*/
 .modal{
   position: fixed;
