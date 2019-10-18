@@ -38,7 +38,6 @@ body{
 
 .active{
   background-color: transparent;
-  border: none;
 }
 
 .projects{
@@ -50,6 +49,7 @@ div.wrapper{
   margin:auto;
   position: relative;
   float: left;
+  /* PV - are there other ways to achieve your layout without floats? And retain the responsiveness? */
 }
 
 div.portfolioProject{
@@ -62,8 +62,8 @@ div.portfolioProject:hover{
   z-index: 1;
 }
 
-.projectPreview{
-  filter: sepia(20%) grayscale(100%) contrast(60%) brightness(110%);
+img.projectPreview{
+  filter: grayscale(100%) contrast(60%) brightness(110%);
   object-fit: cover;
   object-position: 50% 0%;
   position: relative;
@@ -72,25 +72,26 @@ div.portfolioProject:hover{
   margin: auto;
 }
 
-.projectPreview:hover, .onProject{
+img.projectPreview:hover{
   cursor:pointer;
   z-index: 1;
   transform: scale(1.2);
-  -webkit-filter: none;
   -webkit-transition: all 10s;
   transition-timing-function: linear;
   object-position: 100%;
   transition: object-position 5s;
+  z-index: 3;
 }
 
-.onProject{
-  border: solid 2px;
-  border-color: tomato;
-  transform:scale(1);
-  filter: none;
-  z-index: 2;
+.onProject > img.projectPreview, img.projectPreview:hover{
+  filter:grayscale(60%);
 }
 
+<<<<<<< HEAD:styles/portfolio.css
+.onProject > img.projectPreview{
+box-shadow: 0px 0px 20px  #a9cce3;
+=======
+/* PV - you could consider moving the modal styles to a different file */
 /*=====================================================START Modal==============================================================*/
 .modal{
   position: fixed;
@@ -104,54 +105,21 @@ div.portfolioProject:hover{
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.6);
+>>>>>>> master:portfolio.css
 }
 
-.modal-content{
-  margin: auto;
-  position: fixed;
-  top: 8%;
-  left:50%;
-  transform: translateX(-150%);
-  min-width: 250px;
-  width: 75%;
-  max-width: 1000px;
-  background-color: #fefefe;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 1s ease;
+.offProject > img.projectPreview{
+  filter: grayscale(100%) brightness(110%) contrast(20%);
+  z-index: 0;
 }
 
-.showModal{
-  left:50%;
-  transition: 2s linear all;
+.offProject > img.projectPreview:hover{
+  transform:none;
+  cursor: default;
+  transition-timing-function: linear;
+  transition: none;
+  object-position: 50% 0%;
 }
-
-.modalHeader{
-  background-color: black;
-  max-width:200px;
-  color:grey;
-  float:left;
-  padding: 5px 30px 5px 30px;
-  font-weight: bold;
-  margin: auto;
-  border: 1px solid #888;
-  text-align: left;
-}
-
-.modalHeader ul, .modalHeader li{
-  list-style-type: none;
-  margin-left: 0px;
-  padding-left: 8px;
-}
-
-.modalHeader h3{
-  text-align: center;
-  font-size: 24px;
-}
-
-/*-----------------------------------------------------END Modal---------------------------------------------------------*/
 
 button.close {
   margin: auto;
