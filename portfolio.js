@@ -78,14 +78,7 @@ function setModals(){
     }, false)
 
     closeModal[i].addEventListener('click', function(){
-<<<<<<< HEAD
       slideOutModal(activeModal)
-=======
-      setTimeout(unTranslateModal, 1, activeModal);
-      // PV - chaining "parentElement"s like this is quite sensitive to the
-      // structure of the DOM.
-      // Also, this could be a case for using CSS classes to control the display.
->>>>>>> master
       this.parentElement.parentElement.parentElement.style.display = "none";
     })
 
@@ -98,13 +91,7 @@ function setModals(){
           modal[i].style.display = "none";
 }}}}}
 
-<<<<<<< HEAD
 function slideInModal(modal){
-=======
-// PV - I really like the "slide in" effect you have on the modals.
-// I noticed they don't always seem to work, which may be something we can debug.
-function translateModal(modal){
->>>>>>> master
   modal.children[0].style.transform = "translatex(-50%)";
   console.log("slideIn called");
 }
