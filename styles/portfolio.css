@@ -29,6 +29,7 @@ body{
 
 .menuButton:hover, .active{
   color: black;
+  background-color: transparent;
   transition-timing-function: ease-in-out;
   -webkit-transition: all 1s;
   margin: 0 40px 0 40px;
