@@ -4,6 +4,8 @@ showSlides(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  console.log("Slide index: "+n);
+  console.log("modal_height: " + document.getElementById("TANZHausModal").children[0].getAttribute('height'));
 };
 
 // Thumbnail image controls
