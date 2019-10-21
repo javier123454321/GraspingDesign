@@ -25,14 +25,9 @@ function selectPortfolio(buttonName){
 
    let projects = document.getElementsByClassName('portfolioProject')
 
-   // PV - I would recommend aligning {open and close} braces
-   // to help see at a glance which "else"s go with which "if"s
    if (buttonName != 'allButton'){
      for (i = 0; i < projects.length; i++){
 
-       // PV - I see a few different ways of adding and removing classes from elements.
-       // It would help unify the code to pick one method, and possibly encapsulate it
-       // into a helper function.
        if(projects[i].classList.contains(buttonName)){
          projects[i].classList.remove('offProject');
          projects[i].classList.add('onProject');
@@ -50,13 +45,6 @@ function selectPortfolio(buttonName){
           }
       }
    }
-// PV - this seems to be adding and removing classes as necessary
-// based on which button you've clicked.
-// So the issue may be in your CSS.
-
-
-
-
 
 function setModals(){
 
@@ -78,9 +66,11 @@ function setModals(){
     }, false)
 
     closeModal[i].addEventListener('click', function(){
-      
-      slideOutModal(activeModal);
-      setTimeout(unTranslateModal, 1, activeModal);
+
+
+      setTimeout(function(){
+        slideOutModal(activeModal);
+        }, 1, activeModal);
       this.parentElement.parentElement.parentElement.style.display = "none";
     })
 
@@ -89,11 +79,10 @@ function setModals(){
       for (i = 0; i < modal.length; i++) {
         if (event.target == modal[i]) {
           slideOutModal(modal[i])
-          // console.log(modal[i]);
           modal[i].style.display = "none";
 }}}}}
 
-  function slideInModal(modal){
+function slideInModal(modal){
   modal.children[0].style.transform = "translatex(-50%)";
   console.log("slideIn called");
 }

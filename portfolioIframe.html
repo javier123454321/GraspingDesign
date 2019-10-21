@@ -5,6 +5,7 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/modals.css">
+    <link rel="stylesheet" href="styles/projects.css">
   </head>
 
   <body>
@@ -36,8 +37,70 @@
             <button class="close">Back to Portfolio</span>
           </div>
 
-          <img src="https://graspingdesign.files.wordpress.com/2019/03/bai02_interior.jpg?strip=all&w=2000" alt="">
-          <p>Dance, alongside with contemporary forms of art and philosophy, has undergone a transformation in the fundamental cosmological approach to its craft. No longer is it about representing the unity of a harmonic order of the perfect forms of the cosmos. Contemporary discourse has challenged the ability for individual subjects to be able to obtain true knowledge of this underlying unity if it exists at all. Individual perspectives are the focus of investigations and dance has become about the interpretations that each audience member has to the performance at the stage. There is no longer a proper way to undergo the experience the art of dance in contemporary functions because the dance becomes about the relationship of the choreography to the subject observing it. </p>
+          <div class="slideshow-container">
+
+           <!-- Full-width images with number and caption text -->
+           <div class="mySlides fade" id="ext1">
+             <div class="numbertext">1 / 4</div>
+              <div class="content">
+                 <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/exterior.jpg?w=1000">
+                 <div class="text">Exterior View</div>
+              </div>
+           </div>
+
+           <div class="mySlides fade" id="desc">
+             <div class="numbertext">2 / 4</div>
+             <div class="content">
+               <p>Dance, alongside with contemporary forms of art and philosophy, has
+                 undergone a transformation in the fundamental cosmological approach to
+                 its craft. No longer is it about representing the unity of a harmonic
+                 order of the perfect forms of the cosmos. Contemporary discourse has
+                 challenged the ability for individual subjects to be able to obtain true
+                 knowledge of this underlying unity if it exists at all. Individual perspectives
+                 are the focus of investigations and dance has become about the interpretations
+                 that each audience member has to the performance at the stage. There is no longer
+                 a proper way to undergo the experience the art of dance in contemporary functions
+                 because the dance becomes about the relationship of the choreography to the subject
+                 observing it. </p>
+             </div>
+           </div>
+
+           <div class="mySlides fade" id="int1">
+             <div class="numbertext">3 / 4</div>
+              <div class="content">
+                 <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/bai02_interior.jpg?strip=all&w=2000">
+                 <div class="text">Interior View</div>
+              </div>
+           </div>
+
+           <div class="mySlides fade" id="int1">
+             <div class="numbertext">4 / 4</div>
+              <div class="content">
+                 <img class="portfolioImages" src=" https://graspingdesign.files.wordpress.com/2019/03/studio_final-4.jpg?w=1400&h=">
+                 <div class="text">Dance Studios</div>
+              </div>
+           </div>
+
+           <!-- The dots/circles -->
+           <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+           </div>
+           <!-- Next and previous buttons -->
+           <div class="sideButton prev"  onclick="plusSlides(-1)">
+             <a>&#10094;</a>
+           </div>
+
+           <div class="sideButton next" onclick="plusSlides(1)">
+             <a>&#10095;</a>
+           </div>
+
+
+          </div>
+          <br>
+
         </div>
 
       </div>
@@ -196,7 +259,9 @@
 
   </body>
 
-<script type="text/javascript" src="portfolio.js">
+<script type="text/javascript" src="src/portfolio.js">
+</script>
+<script type="text/javascript" src="src/slideshows.js">
 </script>
 
 </html>
