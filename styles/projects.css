@@ -31,13 +31,21 @@ in the display of the information of the modal*/
   margin:auto;
   text-align: justify;
   transform: translateY(-50%);
+}
 
+#p2{
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+#TanzWallSection{
+  margin-top: 20px;
 }
 
 .portfolioImages{
   transform: translateY(-50%);
   max-width:100%;
-  max-height: 95%;
+  /* max-height: 95%; */
   margin: auto;
 }
 /*==============================Navigate previous/next================================*/
@@ -46,11 +54,12 @@ in the display of the information of the modal*/
 .sideButton{
   height: 85vh;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: auto;
   line-height: 85vh;
   width:10vw;
+  drop-shadow:5px, 5px;
 }
 
 .prev, .next{
@@ -68,11 +77,11 @@ in the display of the information of the modal*/
   margin-left: 0
 }
 .prev{
-  left: 0;
+  left: 180px;
 }
 
 .next {
-  right: 0;
+  right: 14px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -119,12 +128,14 @@ in the display of the information of the modal*/
 
 /* The dots/bullets/indicators */
 .dots{
-  text-align: center;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom:24px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  background: black;
+  opacity: .6;
+  padding:10px;
   margin: auto;
+  width: 80.4%;
 }
 
 .dot {
@@ -139,7 +150,30 @@ in the display of the information of the modal*/
 }
 
 .activeP, .dot:hover {
-  background-color: #717171;
+  background-color: slateblue;
+}
+
+/* width */
+::-webkit-scrollbar {
+  opacity: 0;
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+  border-radius: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* Fading animation */
