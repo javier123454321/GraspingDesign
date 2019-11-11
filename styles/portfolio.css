@@ -50,7 +50,6 @@ div.wrapper{
   margin:auto;
   position: relative;
   float: left;
-  /* PV - are there other ways to achieve your layout without floats? And retain the responsiveness? */
 }
 
 div.portfolioProject{
@@ -169,5 +168,10 @@ button.close:active{
   }
   .projects{
     max-width: 200px;
+    }
+    div.wrapper{
+      margin:auto;
+      position: fixed;
+      float: none;
     }
 }

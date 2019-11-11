@@ -64,3 +64,18 @@
   text-align: center;
   font-size: 24px;
 }
+
+@media only screen and (max-width: 415px) {
+  .modalHeader{
+    background-color: black;
+    max-width:200px;
+    color:grey;
+    float:left;
+    padding: 5px 30px 5px 30px;
+    font-weight: bold;
+    margin: auto;
+    border: 1px solid #888;
+    text-align: left;
+    height:85vh;
+  }
+}
