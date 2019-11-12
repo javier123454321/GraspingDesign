@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/modals.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/scroll_animation.css">
   </head>
 
   <body>
@@ -42,15 +43,25 @@
            <!-- Full-width images with number and caption text -->
            <div class="mySlides fade" id="ext1">
               <div class="content">
-                 <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/exterior.jpg?w=1000">
+
+                <!-- Scroll indicator -->
+
+                <!-- Modal content -->
+
+                <div class="pFolioWrapperWrapper">
+                   <img src="https://graspingdesign.files.wordpress.com/2019/03/exterior.jpg?w=1000">
+
+                   <div class="arrow">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                   </div>
+
+                </div>
+                  <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/exterior.jpg?w=1000">
                  <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/bai02_interior.jpg?strip=all&w=2000">
                  <img class="portfolioImages" src=" https://graspingdesign.files.wordpress.com/2019/03/studio_final-4.jpg?w=1400&h=">
-              </div>
-           </div>
-
-           <div class="mySlides fade" id="desc">
-             <div class="content">
-               <p>Dance, alongside with contemporary forms of art and philosophy, has
+                 <p>Dance, alongside with contemporary forms of art and philosophy, has
                  undergone a transformation in the fundamental cosmological approach to
                  its craft. No longer is it about representing the unity of a harmonic
                  order of the perfect forms of the cosmos. Contemporary discourse has
@@ -62,40 +73,20 @@
                  because the dance becomes about the relationship of the choreography to the subject
                  observing it. </p>
 
-              <img width="60%" src="https://graspingdesign.files.wordpress.com/2019/03/ballet_modern_final.jpg?w=700&h=">
+                <img class= "tallDrawings" src="https://graspingdesign.files.wordpress.com/2019/03/ballet_modern_final.jpg?w=700&h=">
 
-              <p id="p2">How to embody this transformation architecturally became the driving question
+                <p id="p2">How to embody this transformation architecturally became the driving question
                 of this project. By putting the circulation in the middle, through a habitable
                 structure, the person travelling through the space gets to understand the dancers
                 in the building in different ways – none of which can be considered proper.</p>
-              <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/section3-1.jpg?w=1400&h=">
-              <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/04bai_section-2.jpg?w=1400&h=">
-              <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/05bai_structure.jpg?w=2000&h=">
-             </div>
-           </div>
 
-           <div class="mySlides fade" id="int1">
-              <div class="content">
-                <img class="portfolioImages" id="TanzWallSection" height="100%" src="https://graspingdesign.files.wordpress.com/2019/03/3d-wall-section.jpg">
+                <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/section3-1.jpg?w=1400&h=">
+                <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/04bai_section-2.jpg?w=1400&h=">
+                <img class="portfolioImages" src="https://graspingdesign.files.wordpress.com/2019/03/05bai_structure.jpg?w=2000&h=">
+
+                <img class="portfolioImages tallDrawings" id="TanzWallSection" src="https://graspingdesign.files.wordpress.com/2019/03/3d-wall-section.jpg?h=1500">
               </div>
            </div>
-
-           <!-- The dots/circles -->
-           <div id="numbertext"></div>
-           <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-           </div>
-
-           <!-- Next and previous buttons -->
-             <div class="sideButton prev"  onclick="plusSlides(-1)">
-               <a>&#10094;</a>
-             </div>
-
-             <div class="sideButton next" onclick="plusSlides(1)">
-               <a>&#10095;</a>
-             </div>
 
 
           </div>

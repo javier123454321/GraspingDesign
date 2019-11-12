@@ -4,11 +4,9 @@
 in the display of the information of the modal*/
 .slideshow-container {
   overflow-y: scroll;
-  max-width: 1000px;
   position: relative;
   margin: auto;
-  width: 100vw;
-  height:85vh;
+  max-height:83.5vh;
 }
 
 /* Hide the images by default */
@@ -16,91 +14,47 @@ in the display of the information of the modal*/
   display: box;
 }
 
+.pFolioWrapperWrapper{
+  position: relative;
+  height: 83.5vh;
+  width: 100%;
+  overflow:hidden;
+}
+.pFolioWrapperWrapper > img{
+min-width: 100%;
+min-height: 100%;
+}
+
 .content{
-  width:100%;
-  position: absolute;
+  max-width:100%;
+  border-radius: solid 5px orange;
+  position: relative;
   left: 50%;
-  top: 50%;
   transform: translate(-50%);
-  max-height: 85vh;
-  height: 85vh;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.content > p, .content > img{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content > p{
   max-width: 60%;
-  margin:auto;
   text-align: justify;
-  transform: translateY(-50%);
-}
-
-#p2{
-  margin-top: 100px;
-  margin-bottom: 200px;
-}
-
-#TanzWallSection{
-  margin-top: 20px;
 }
 
 .portfolioImages{
-  transform: translateY(-50%);
-  max-width:100%;
-  /* max-height: 95%; */
+  width: 80%;
+  max-width: 1500px;
   margin: auto;
 }
-/*==============================Navigate previous/next================================*/
 
-/* sidebuttons span the entire height (hardcoded as 85vh)*/
-.sideButton{
-  height: 85vh;
-  cursor: pointer;
-  position: fixed;
-  top: 0;
-  width: auto;
-  line-height: 85vh;
-  width:10vw;
-  drop-shadow:5px, 5px;
+.tallDrawings{
+  width:50%;
 }
-
-.prev, .next{
-  color: slategrey;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-transition: all 1s;
-  transition-timing-function: ease-in-out;
-}
-
-.prev > a, .next > a{
-  margin-left: 0
-}
-.prev{
-  left: 180px;
-}
-
-.next {
-  right: 14px;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover{
-  background-image: linear-gradient(to right, grey, rgb(0,0,0,0));
-  -webkit-transition: all 1s;
-}
-
-.next:hover {
-  background-image: linear-gradient(to left, grey, rgb(0,0,0,0));
-
-}
-
-.prev:hover, .next:hover{
-  transition: 0.6s ease;
-  -webkit-transition: all 1s;
-}
-
-/*==============================Navigate Menu (dots, count, title)================================*/
 
 /* Caption text */
 .text {
@@ -126,32 +80,6 @@ in the display of the information of the modal*/
   transform: translateX(-50%);
 }
 
-/* The dots/bullets/indicators */
-.dots{
-  position: fixed;
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
-  background: black;
-  opacity: .6;
-  padding:10px;
-  margin: auto;
-  width: 80.4%;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.activeP, .dot:hover {
-  background-color: slateblue;
-}
 
 /* width */
 ::-webkit-scrollbar {
@@ -192,4 +120,19 @@ in the display of the information of the modal*/
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+@media only screen and (max-width: 850px) {
+  .tallDrawings{
+    max-height: 95vh;
+    width: auto;
+    max-width: 95%
+  }
+  .slideshow-container {
+    overflow-y: scroll;
+    position: relative;
+    margin: auto;
+    max-height:100vh;
+    overflow-x: hidden;
+  }
 }

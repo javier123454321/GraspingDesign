@@ -3,6 +3,7 @@
 html{
   background: rgb(132,38,134);
   background: linear-gradient(180deg, rgba(60, 39, 122,1) 50%, #33418a 98%);
+  background-attachment: fixed;
   font-family: 'Montserrat', 'Helvetica';
   background-size: 100vw 100vh;
 }
@@ -136,6 +137,11 @@ button.close:active{
   .projects{
     max-width: 600px;
   }
+  button.close {
+    position:relative;
+    margin: auto;
+    background-color: #272727;
+  }
 }
 
 @media only screen and (max-width: 615px) {
@@ -169,9 +175,14 @@ button.close:active{
   .projects{
     max-width: 200px;
     }
-    div.wrapper{
-      margin:auto;
-      position: fixed;
-      float: none;
-    }
+  div.wrapper{
+    margin:auto;
+    float: none;
+  }
+
+  button.close {
+    position:relative;
+    margin: auto;
+    background-color: #272727;
+  }
 }
